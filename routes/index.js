@@ -20,16 +20,20 @@ router.post('/', (req, res, next)=>{
   let body = req.body;
   knex('messages')
   .insert(body)
-  .returning(['id', 'name', 'description', 'image'])
+  .returning('*')
   .then((result)=> {
     res.send(result)
   })
 });
 
-// router.patch('$1/:id', (req,res,next)=>{
-//   let id = req.params.id;
-//   let body = req.body;
-// });
+router.patch('/:id', (req,res,next)=>{
+  let id = req.params.id;
+  let body = req.body;
+  knex('messages')
+  .update(body)
+  .where('id', id)
+  .then(result=>{res.send('updated')}).catch((err)=>console.log(err))
+});
 
 router.delete('/:id', (req,res,next)=>{
   let id = req.params.id;
@@ -38,4 +42,5 @@ router.delete('/:id', (req,res,next)=>{
   .where('id',id)
   .then(() => {res.send('deleted')})
 });
+
 module.exports = router;
