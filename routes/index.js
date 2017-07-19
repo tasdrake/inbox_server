@@ -34,7 +34,6 @@ router.patch('/:id', (req,res,next)=>{
   knex('messages')
   .update({
     read: body.read,
-    selected: body.selected,
     starred: body.starred,
     labels: body.labels
   })
