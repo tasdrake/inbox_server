@@ -5,61 +5,67 @@ exports.seed = function(knex, Promise) {
     .then(() => {
       return knex('messages').insert([
         {
-          "id": 1,
+          "id": 0,
           "subject": "You can't input the protocol without calculating the mobile RSS protocol!",
+          "body": "Well I am going to do it anyways!",
           "read": false,
-          "starred": true,
+          "starred": false,
           "labels": ["dev", "personal"]
         },
         {
-          "id": 2,
-          "subject": "connecting the system won't do anything, we need to input the mobile AI panel!",
+          "id": 1,
+          "subject": "Connecting the system won't do anything, we need to input the mobile AI panel!",
+          "body": "Don't teach the AI too much",
           "read": false,
           "starred": false,
-          "selected": true,
           "labels": []
         },
         {
-          "id": 3,
+          "id": 2,
           "subject": "Use the 1080p HTTP feed, then you can parse the cross-platform hard drive!",
+          "body": "That is a great solution",
           "read": false,
-          "starred": true,
+          "starred": false,
           "labels": ["dev"]
         },
         {
-          "id": 4,
+          "id": 3,
           "subject": "We need to program the primary TCP hard drive!",
-          "read": true,
+          "body": "Do it now!",
+          "read": false,
           "starred": false,
-          "selected": true,
-          "labels": []
+          "labels": ["gschool"]
         },
         {
-          "id": 5,
+          "id": 4,
           "subject": "If we override the interface, we can get to the HTTP feed through the virtual EXE interface!",
+          "body": "But at what cost!?",
           "read": false,
           "starred": false,
           "labels": ["personal"]
         },
         {
-          "id": 6,
+          "id": 5,
           "subject": "We need to back up the wireless GB driver!",
-          "read": true,
-          "starred": true,
+          "body": "We don't want to lose all our data",
+          "read": false,
+          "starred": false,
           "labels": []
         },
         {
-          "id": 7,
+          "id": 6,
           "subject": "We need to index the mobile PCI bus!",
-          "read": true,
+          "body": "There is so much urgency!",
+          "read": false,
           "starred": false,
           "labels": ["dev", "personal"]
         },
         {
-          "id": 8,
+          "id": 7,
           "subject": "If we connect the sensor, we can get to the HDD port through the redundant IB firewall!",
-          "read": true,
-          "starred": true,
+          "body": "Less security is always better",
+          "read": false,
+          "starred": false,
           "labels": []
         }
       ])
